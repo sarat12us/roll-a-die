@@ -2,9 +2,11 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'dart:math';
+
+import '../dice-item.dart';
 
 class DiceApp extends StatefulWidget {
+  static String Id = 'dice_page';
   @override
   _DiceApp createState() => _DiceApp();
 }
@@ -19,7 +21,8 @@ class _DiceApp extends State<DiceApp> with SingleTickerProviderStateMixin {
       duration: Duration(seconds: 5),
       vsync: this,
     )..addListener(() => setState(() {
-          netDieImage = Random().nextInt(5) + 1;
+          diceItem.changeDice();
+          //netDieImage = Random().nextInt(5) + 1;
         }));
 
     animation = CurvedAnimation(
@@ -39,7 +42,8 @@ class _DiceApp extends State<DiceApp> with SingleTickerProviderStateMixin {
     await animationController.forward(from: 0.0);
   }
 
-  int netDieImage = 1;
+  //int netDieImage = 1;
+  DiceItem diceItem = new DiceItem();
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
@@ -61,7 +65,7 @@ class _DiceApp extends State<DiceApp> with SingleTickerProviderStateMixin {
                   child: Container(
                     child: Padding(
                       padding: const EdgeInsets.all(100.0),
-                      child: Image.asset('images/dice$netDieImage.png'),
+                      child: Image.asset('images/dice${diceItem.currentNumber}.png'),
                     ),
                   ),
                 ),
