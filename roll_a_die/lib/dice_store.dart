@@ -1,5 +1,4 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_storage/firebase_storage.dart';
 
 class DiceStore {
   final databaseReference = Firestore.instance;
@@ -18,14 +17,15 @@ class DiceStore {
     }
   }
 
-  Future<void> getDiceResult() async {
+  Future<String> getDiceResult() async {
     initialize();
     return databaseReference.collection("dice_result").document("1").get().then((snapshot) {
       try {
         diceRes = DiceResult.fromSnapshot(snapshot);
+        return diceRes.state;
       } catch (e) {
         print(e);
-        diceRes = null;
+        return diceRes.userid = null;
       }
     });
   }
@@ -43,7 +43,7 @@ class DiceStore {
     initialize();
     databaseReference.collection("dice_result").document("1").updateData({
       'userid': userid,
-      'state': "play",
+      'state': "stop",
       'occur': occur  
     });
   }

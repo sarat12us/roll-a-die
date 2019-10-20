@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "453868260888",
+    "firebase_url": "https://sindvin-dice-app-78923.firebaseio.com",
+    "project_id": "sindvin-dice-app-78923",
+    "storage_bucket": "sindvin-dice-app-78923.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:453868260888:android:9b8f116cd93d7e70ae7d6d",
+        "android_client_info": {
+          "package_name": "com.sindvin.roll_a_die"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "453868260888-p6o74jmhbu9npbh4qairme0geb2u3plp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB1JHoLenkCmS5oztR678tClQRfTo6b38A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "453868260888-p6o74jmhbu9npbh4qairme0geb2u3plp.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "453868260888-35rhuo53pthteravluhnh32u9bkk0nqf.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.sindvin.rollADie"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
