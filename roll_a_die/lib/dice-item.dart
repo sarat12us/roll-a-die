@@ -6,6 +6,7 @@ class DiceItem {
   int progressCount;
   List<int> occurCount = new List(7);
 
+  // In this the 7 has nothing to with simulating 7 sided die with 5 sided , its just a count of asset images
   DiceItem(){
     currentNumber = 1;
     progressCount = 0;
@@ -32,3 +33,4 @@ class DiceItem {
   }
 
 }
+
